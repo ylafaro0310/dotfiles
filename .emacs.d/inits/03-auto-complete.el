@@ -1,0 +1,5 @@
+(require 'auto-complete)
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20170124.1845/dict")
+(ac-config-default)
+(setq ac-use-menu-map t)

@@ -41,7 +41,7 @@
 
 ;; set yasnippets
 (require 'yasnippet)
-(yas/load-directory "~/.emacs.d/snippets")
+(yas/load-directory "~/.emacs.d/snippets/yasnippet-ruby-mode/")
 (yas-global-mode 1)
 
 ;; 既存スニペットを挿入する
@@ -51,8 +51,18 @@
 ;; 既存スニペットを閲覧・編集する
 (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
 
+
 ;; set flycheck
 (require 'flycheck)
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
 (add-hook 'ruby-mode-hook 'flycheck-mode)
 
+
+;; set robe
+(add-hook 'ruby-mode-hook 'robe-mode)
+(autoload 'robe-mode "robe" "Code navigation, documentation lookup and completion for Ruby" t nil)
+(autoload 'ac-robe-setup "ac-robe" "auto-complete robe" nil nil)
+(add-hook 'robe-mode-hook 'ac-robe-setup)
+
+;; set flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)

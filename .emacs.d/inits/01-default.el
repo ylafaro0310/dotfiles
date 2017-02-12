@@ -7,3 +7,7 @@
 ;; メニューバーにファイルパスを表示する
 (setq frame-title-format
       (format "%%f - Emacs@%s" (system-name)))
+
+;; 行番号表示
+(require 'linum)
+(global-linum-mode)
