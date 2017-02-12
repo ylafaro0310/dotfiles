@@ -6,7 +6,7 @@
 (setq load-path
   (append
   (list
-  (expand-file-name "~/.emacs.d/")
+  (expand-file-name "~/.emacs.d/lisp")
   (expand-file-name "~/.emacs.d/init-loader/")
   (expand-file-name "~/.emacs.d/site-lisp/")
   (expand-file-name "~/.emacs.d/site-lisp/color-theme-6.6.0")
