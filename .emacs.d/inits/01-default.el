@@ -26,3 +26,8 @@
   "set frame parameter 'alpha"
   (interactive "nAlpha: ")
   (set-frame-parameter nil 'alpha (cons alpha-num '(90))))
+
+;; howm の設定
+(setq howm-menu-lang 'ja)
+(global-set-key "\C-c,," 'howm-menu)
+(autoload 'howm-menu "howm" "Hitori Otegaru Wiki Modoki" t)

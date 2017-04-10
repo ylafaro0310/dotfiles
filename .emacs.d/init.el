@@ -10,6 +10,7 @@
   (expand-file-name "~/.emacs.d/init-loader/")
   (expand-file-name "~/.emacs.d/site-lisp/")
   (expand-file-name "~/.emacs.d/site-lisp/color-theme-6.6.0")
+  (expand-file-name "~/.emacs.d/site-lisp/howm")
   )
   load-path))
 
