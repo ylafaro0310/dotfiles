@@ -51,6 +51,9 @@ alias mkdir='mkdir -p'
 # Enable complete after 'sudo'
 alias sudo='sudo '
 
+# Emacs cui mode
+alias emacs='emacs -nw'
+
 # Global alias
 alias -g L='| less'
 alias -g G='| grep'
