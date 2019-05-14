@@ -57,3 +57,6 @@ alias emacs='emacs -nw'
 # Global alias
 alias -g L='| less'
 alias -g G='| grep'
+
+# Completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
