@@ -37,10 +37,18 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # aliases
-alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -l'
-alias lla='ls -la'
+case "${OSTYPE}" in
+darwin*)
+  alias ls="ls -G"
+  alias ll="ls -lG"
+  alias la="ls -laG"
+  ;;
+linux*)
+  alias ls='ls --color'
+  alias ll='ls -l --color'
+  alias la='ls -la --color'
+  ;;
+esac
 
 alias rm='rm -i'
 alias cp='cp -i'
@@ -60,3 +68,7 @@ alias -g G='| grep'
 
 # Completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
